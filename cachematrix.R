@@ -3,6 +3,9 @@
 
 ## Write a short comment describing this function
 
+## This function("makeCacheMatrix") is creating  matrix object that cache its inverse matrix
+## containing 4 other functions
+
 makeCacheMatrix <- function(x = matrix()) {
   
   inversproperty <- NULL
@@ -35,8 +38,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 
+## This function ("cacheSolve") is computing the inverse of the matrix from "makeCacheMatrix"
+## inverse has already been calculated from above but, "cacheSolve" has to retrieve inverse from the cache
+## contatining 3 other functions
+
 cacheSolve <-function(x, ...){
-      ## Return a matrix that is the inverse of 'x'
+      ## Return a matrix "X"
       
   inversproperty<-x$getinverse()
   
