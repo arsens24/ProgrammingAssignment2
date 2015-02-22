@@ -19,15 +19,17 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() {
     x
   }
+  ## get matrix
   
   setinverse <- function(inverse) {
     inversproperty <<- inverse
   }
+  ## set inverse of the matrix
   
   getinverse <- function() {
     inversproperty
   }
-  
+  ## return the inverse 
   
   list(set = set, get = get,
        setinverse = setinverse,
@@ -55,10 +57,14 @@ cacheSolve <-function(x, ...){
   }
   
   data <- x$get()
+  ## matrix from object
   
   inversproperty <- solve(data,...)
+  ## compute inverse matrix
   
   x$setinverse(inversproperty)
+  ##set inverse to object
   
   inversproperty
+  ## return value
 }
